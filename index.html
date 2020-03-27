@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FOTOTECA</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="body">
+    <div id="contenedor">
+        <h1>GALERIA DE FOTOS</h1>
+        <section id="galeria"></section>
+        <h2>FOTOTECA</h2>
+        <section id="fototeca"></section>
+            <div id="lightbox">
+            <div id="lightbox-container">
+            <img src="img/flecha.png" id="anterior" onclick="selectNextModalPhoto('previous', event)">
+            <img id="imagen_lightbox">
+            <img src="img/flecha.png" id="siguiente" onclick="selectNextModalPhoto('forward', event)">
+           </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html> 

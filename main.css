@@ -1,0 +1,68 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#contenedor {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+   
+}
+
+
+#lightbox-container {
+    position: relative;
+    top: 30%;
+    left: 25%;
+}
+
+.imgContainer {
+    position:relative;
+    width: fit-content;
+
+}
+
+.closeAxis {
+    position: absolute;
+    width: 16px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+#lightbox {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    opacity: 0;
+    transition: opacity 1s;
+    pointer-events: none; /* Esta propuedad CSS es controvertida. Sirve para devir que sobre el lightbox, no actuen los 'eventos' habituales de interacción. Esto es, que no se pueda hacer click sobre el lightbox. https://escss.blogspot.com/2012/04/pointer-events-los-elementos-juegan-al.html*/
+}
+
+
+#lightbox.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#siguiente, #anterior {
+    width: 5%;
+}
+#siguiente {
+    transform: rotate(180deg);
+}
+
